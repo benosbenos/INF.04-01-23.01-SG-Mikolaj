@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="INF._04_01_23._01_SG_Mikolaj.MainPage">
+
+    <ScrollView BackgroundColor="#B0C4DE" Padding="100">
+        <VerticalStackLayout>
+
+
+            <Grid Padding="101" ColumnSpacing="101">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border
+                        Stroke="White"
+                        StrokeThickness="4"
+                        StrokeShape="RoundRectangle 20,20,20,20">
+                    <Grid ColumnSpacing="50" RowSpacing="50" Padding="20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+
+                        <Label TextColor="Black" Text="Imię" VerticalOptions="Center" HorizontalOptions="Start"/>
+                        <Entry TextColor="Black" BackgroundColor="White" Grid.Column="1"  VerticalOptions="Center" HorizontalOptions="Fill"/>
+
+                        <Label TextColor="Black" Text="Nazwisko" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Start"/>
+                        <Entry TextColor="Black" BackgroundColor="White" Grid.Row="1" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Fill"/>
+
+                        <Label TextColor="Black" Text="stanowisko" Grid.Row="2" VerticalOptions="Center" HorizontalOptions="Start"/>
+                        <Picker TextColor="Black" BackgroundColor="White" Grid.Row="2" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Fill"/>
+                        
+                    </Grid>
+                </Border>   
+
+                <Border
+                    Grid.Column="1"
+                    Stroke="White"
+                    StrokeThickness="4"
+                    StrokeShape="RoundRectangle 20,20,20,20">   
+                    <StackLayout Padding="50">
+                        <VerticalStackLayout>
+                            <Grid>
+                                    <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+                                    <Label TextColor="Black" Text="Ile znaków?" VerticalOptions="Center" HorizontalOptions="Start"/>
+                                <Entry TextColor="Black" BackgroundColor="White" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Fill"/>
+
+                                </Grid>
+                                <HorizontalStackLayout>
+                        <CheckBox Grid.Column="1" />
+                        <Label Grid.Column="1" Text="Małe i wielkie litery" TextColor="Black"/>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout>
+                        <CheckBox Grid.Column="1" />
+                        <Label Grid.Column="1" Text="Cyfry" TextColor="Black"/>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout>
+                        <CheckBox Grid.Column="1"/>
+                                <Label Grid.Column="1" Text="Znaki specjalnie" TextColor="Black"/>
+                            </HorizontalStackLayout>
+                            <Button Text="Generuj hasło" HorizontalOptions="Center" TextColor="Black" BackgroundColor="#4682B4"/>
+                        </VerticalStackLayout>
+                    </StackLayout>
+                </Border>
+            </Grid>
+
+            <Button Text="Zatwierdź" HorizontalOptions="Center" WidthRequest="200" BackgroundColor="#4682B4"/>
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
